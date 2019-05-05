@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" data-pg-collapsed>
+	<head data-pg-collapsed>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<script src="../js/vue.js"></script>
+		<link href="../css/style.css" rel="stylesheet">
+	</head>
+	<body data-pg-collapsed>
+		<div class="app" id='app'>
+			<div class="setting">
+				<div class="row">
+					<div class="box">
+						<p>Widget Position</p>
+					</div>
+					<ul class="row" data-pg-collapsed>
+						<li>
+							<input type="radio" name="position" checked="checked" value="top" />
+						</li>
+						<li>
+							<p>top</p>
+						</li>
+						<li>
+							<input type="radio" name="position" checked="checked" value="bottom" />
+						</li>
+						<li>
+							<p>bottom</p>
+						</li>
+					</ul>
+				</div>
+				<div class="row">
+					<div class="box">
+						<p style="flex-grow: 0;">HITBTC api key</p>
+					</div>
+					<input type="text" style="height: 36px;
+    background-color: rgba(74, 78, 92, 0.55);
+    border: 0 solid;
+    color: white;
+    text-align: right;
+    font-size: 21px;" />
+				</div>
+				<div class="row">
+					<div class="box">
+						<p>Favorite list</p>
+					</div>
+					<button>ADD</button>
+				</div>
+				<div class="row" style="float: right;">
+					<button @click='quit'>CLOSE</button>
+					<button>SAVE</button>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="./setting.js"></script>
+</html>

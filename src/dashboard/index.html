@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<link href="style.css" rel="stylesheet">
+		<link rel="stylesheet" href="./css/normalize.css">
+		<link rel="stylesheet" href="./css/font-awesome.min.css">
+	</head>
+	<body>
+		<div class="app">
+			<div class="header">
+				<div class="logo">
+					<img src="img/square%20short%20logo.png" />
+				</div>
+				<div class="mainNav">
+					<ul>
+						<li class="active" id="menuDashboard">Dashboard</li>
+						<li id="menuExchange">Exchange</li>
+						<li id="menuAlert">Alert</li>
+						<li id="menuAccount">Account</li>
+					</ul>
+				</div>
+				<div class="accountInfo">
+					<span>Overall Balance</span>
+					<ul>
+						<li>
+							<span>BTC:-</span>
+							<span id="accountBtc">0.0202312</span>
+						</li>
+						<li>
+							<span>USDT:-</span>
+							<span id="accountUsd">0.0202312</span>
+						</li>
+						<li>
+							<span>NGN :-</span>
+							<span id="accountNgn">6039485932</span>
+						</li>
+					</ul>
+				</div>
+				<div class="userProfile">
+					<ul>
+						<li id="userReports">
+							<i class="fa fa-list-alt"></i>
+						</li>
+						<li id="userNotification">
+							<i class="fa fa-bell-o"></i>
+						</li>
+						<li id="userSettings">
+							<i class="fa fa-cog"></i>
+						</li>
+					</ul>
+					<span id="userName">Username</span>
+					<div class="userImg" id="userDp">
+						<img src="img/download.jpg" />
+					</div>
+				</div>
+			</div>
+			<div class="main">
+				<div class="content">
+					<div class="bar">
+						<div class="tab" id="barTrending">
+							<p>Trending</p>
+						</div>
+						<div class="tab" id="barFavorite">
+							<p>Favorite</p>
+						</div>
+						<div class="tab" id="barNewComer">
+							<p>New Commers</p>
+						</div>
+						<div class="searchInstruments">
+							<input placeholder="Search Instrument " type="search">
+						</div>
+						<div class="sortBy" style="flex-basis: 140px;">
+							<span style="font-size: 20px;
+    color: #ffffff;
+    background-color: var(--plate2);">Sort By: </span>
+							<select id="barSort">
+								<option>Volume</option>
+								<option>Price</option>
+								<option>Change</option>
+							</select>
+						</div>
+					</div>
+					<div class="display">
+						<div class="card">
+							<div class="wrapper">
+								<div class="row">
+									<div>
+										<span>Ask</span>
+										<span>0.00343</span>
+									</div>
+									<div>
+										<i class="fa fa-area-chart"></i>
+										<i class="fa fa-heart"></i>
+									</div>
+								</div>
+								<div class="row2">
+									<span>23.342123</span>
+								</div>
+								<div class="signal row3">
+									<span> <i class="fa fa-arrow-up" style="color: var(--green);" v-on:click='increase(index)'></i> </span>
+									<span> <p>BTC</p> </span>
+									<span> <i class="fa fa-arrow-down" style="color: var(--plate3);" @click='decrease(index)'></i> </span>
+								</div>
+								<div class="row2">
+									<span>2312 USD</span>
+								</div>
+								<div class="row">
+									<div>
+										<span>P/L</span>
+										<span>399</span>
+										<span>USD</span>
+									</div>
+									<div>
+										<span>Bid:</span>
+										<span>0.34233</span>
+									</div>
+								</div>
+							</div>
+							<div class="trade">
+								<div class="field">
+									<span>Amount</span>
+									<input>
+								</div>
+								<div class="field">
+									<span>Price</span>
+									<input>
+								</div>
+								<div class="field">
+									<span>Total</span>
+									<input>
+								</div>
+								<button type="button" style="height: 50px;
+    font-size: 20px;
+    text-transform: uppercase;
+    background-color: var(--green);
+    border: 0 solid;
+    color: var(--plate3);
+    font-weight: bolder;
+    margin-top: 10px;">Buy</button>
+							</div>
+						</div>
+						<div class="card">
+							<div class="wrapper">
+								<div class="row">
+									<div>
+										<span>Ask</span>
+										<span>0.00343</span>
+									</div>
+									<div>
+										<i class="fa fa-area-chart"></i>
+										<i class="fa fa-heart"></i>
+									</div>
+								</div>
+								<div class="row2">
+									<span>23.342123</span>
+								</div>
+								<div class="signal row3">
+									<span> <i class="fa fa-arrow-up" style="color: var(--green);" v-on:click='increase(index)'></i> </span>
+									<span> <p>BTC</p> </span>
+									<span> <i class="fa fa-arrow-down" style="color: var(--plate3);" @click='decrease(index)'></i> </span>
+								</div>
+								<div class="row2">
+									<span>2312 USD</span>
+								</div>
+								<div class="row">
+									<div>
+										<span>P/L</span>
+										<span>399</span>
+										<span>USD</span>
+									</div>
+									<div>
+										<span>Bid:</span>
+										<span>0.34233</span>
+									</div>
+								</div>
+							</div>
+							<div class="trade">
+								<div class="field">
+									<span>Amount</span>
+									<input>
+								</div>
+								<div class="field">
+									<span>Price</span>
+									<input>
+								</div>
+								<div class="field">
+									<span>Total</span>
+									<input>
+								</div>
+								<button type="button" style="height: 50px;
+    font-size: 20px;
+    text-transform: uppercase;
+    background-color: var(--green);
+    border: 0 solid;
+    color: var(--plate3);
+    font-weight: bolder;
+    margin-top: 10px;">Buy</button>
+							</div>
+						</div>
+						<div class="card">
+							<div class="wrapper">
+								<div class="row">
+									<div>
+										<span>Ask</span>
+										<span>0.00343</span>
+									</div>
+									<div>
+										<i class="fa fa-area-chart"></i>
+										<i class="fa fa-heart"></i>
+									</div>
+								</div>
+								<div class="row2">
+									<span>23.342123</span>
+								</div>
+								<div class="signal row3">
+									<span> <i class="fa fa-arrow-up" style="color: var(--green);" v-on:click='increase(index)'></i> </span>
+									<span> <p>BTC</p> </span>
+									<span> <i class="fa fa-arrow-down" style="color: var(--plate3);" @click='decrease(index)'></i> </span>
+								</div>
+								<div class="row2">
+									<span>2312 USD</span>
+								</div>
+								<div class="row">
+									<div>
+										<span>P/L</span>
+										<span>399</span>
+										<span>USD</span>
+									</div>
+									<div>
+										<span>Bid:</span>
+										<span>0.34233</span>
+									</div>
+								</div>
+							</div>
+							<div class="trade">
+								<div class="field">
+									<span>Amount</span>
+									<input>
+								</div>
+								<div class="field">
+									<span>Price</span>
+									<input>
+								</div>
+								<div class="field">
+									<span>Total</span>
+									<input>
+								</div>
+								<button type="button" style="height: 50px;
+    font-size: 20px;
+    text-transform: uppercase;
+    background-color: var(--green);
+    border: 0 solid;
+    color: var(--plate3);
+    font-weight: bolder;
+    margin-top: 10px;">Buy</button>
+							</div>
+						</div>
+						<div class="card">
+							<div class="wrapper">
+								<div class="row">
+									<div>
+										<span>Ask</span>
+										<span>0.00343</span>
+									</div>
+									<div>
+										<i class="fa fa-area-chart"></i>
+										<i class="fa fa-heart"></i>
+									</div>
+								</div>
+								<div class="row2">
+									<span>23.342123</span>
+								</div>
+								<div class="signal row3">
+									<span> <i class="fa fa-arrow-up" style="color: var(--green);" v-on:click='increase(index)'></i> </span>
+									<span> <p>BTC</p> </span>
+									<span> <i class="fa fa-arrow-down" style="color: var(--plate3);" @click='decrease(index)'></i> </span>
+								</div>
+								<div class="row2">
+									<span>2312 USD</span>
+								</div>
+								<div class="row">
+									<div>
+										<span>P/L</span>
+										<span>399</span>
+										<span>USD</span>
+									</div>
+									<div>
+										<span>Bid:</span>
+										<span>0.34233</span>
+									</div>
+								</div>
+							</div>
+							<div class="trade">
+								<div class="field">
+									<span>Amount</span>
+									<input>
+								</div>
+								<div class="field">
+									<span>Price</span>
+									<input>
+								</div>
+								<div class="field">
+									<span>Total</span>
+									<input>
+								</div>
+								<button type="button" style="height: 50px;
+    font-size: 20px;
+    text-transform: uppercase;
+    background-color: var(--green);
+    border: 0 solid;
+    color: var(--plate3);
+    font-weight: bolder;
+    margin-top: 10px;">Buy</button>
+							</div>
+						</div>
+						<div class="card">
+							<div class="wrapper">
+								<div class="row">
+									<div>
+										<span>Ask</span>
+										<span>0.00343</span>
+									</div>
+									<div>
+										<i class="fa fa-area-chart"></i>
+										<i class="fa fa-heart"></i>
+									</div>
+								</div>
+								<div class="row2">
+									<span>23.342123</span>
+								</div>
+								<div class="signal row3">
+									<span> <i class="fa fa-arrow-up" style="color: var(--green);" v-on:click='increase(index)'></i> </span>
+									<span> <p>BTC</p> </span>
+									<span> <i class="fa fa-arrow-down" style="color: var(--plate3);" @click='decrease(index)'></i> </span>
+								</div>
+								<div class="row2">
+									<span>2312 USD</span>
+								</div>
+								<div class="row">
+									<div>
+										<span>P/L</span>
+										<span>399</span>
+										<span>USD</span>
+									</div>
+									<div>
+										<span>Bid:</span>
+										<span>0.34233</span>
+									</div>
+								</div>
+							</div>
+							<div class="trade">
+								<div class="field">
+									<span>Amount</span>
+									<input>
+								</div>
+								<div class="field">
+									<span>Price</span>
+									<input>
+								</div>
+								<div class="field">
+									<span>Total</span>
+									<input>
+								</div>
+								<button type="button" style="height: 50px;
+    font-size: 20px;
+    text-transform: uppercase;
+    background-color: var(--green);
+    border: 0 solid;
+    color: var(--plate3);
+    font-weight: bolder;
+    margin-top: 10px;">Buy</button>
+							</div>
+						</div>
+						<div class="card">
+							<div class="wrapper">
+								<div class="row">
+									<div>
+										<span>Ask</span>
+										<span>0.00343</span>
+									</div>
+									<div>
+										<i class="fa fa-area-chart"></i>
+										<i class="fa fa-heart"></i>
+									</div>
+								</div>
+								<div class="row2">
+									<span>23.342123</span>
+								</div>
+								<div class="signal row3">
+									<span> <i class="fa fa-arrow-up" style="color: var(--green);" v-on:click='increase(index)'></i> </span>
+									<span> <p>BTC</p> </span>
+									<span> <i class="fa fa-arrow-down" style="color: var(--plate3);" @click='decrease(index)'></i> </span>
+								</div>
+								<div class="row2">
+									<span>2312 USD</span>
+								</div>
+								<div class="row">
+									<div>
+										<span>P/L</span>
+										<span>399</span>
+										<span>USD</span>
+									</div>
+									<div>
+										<span>Bid:</span>
+										<span>0.34233</span>
+									</div>
+								</div>
+							</div>
+							<div class="trade">
+								<div class="field">
+									<span>Amount</span>
+									<input>
+								</div>
+								<div class="field">
+									<span>Price</span>
+									<input>
+								</div>
+								<div class="field">
+									<span>Total</span>
+									<input>
+								</div>
+								<button type="button" style="height: 50px;
+    font-size: 20px;
+    text-transform: uppercase;
+    background-color: var(--green);
+    border: 0 solid;
+    color: var(--plate3);
+    font-weight: bolder;
+    margin-top: 10px;">Buy</button>
+							</div>
+						</div>
+						<div class="card">
+							<div class="wrapper">
+								<div class="row">
+									<div>
+										<span>Ask</span>
+										<span>0.00343</span>
+									</div>
+									<div>
+										<i class="fa fa-area-chart"></i>
+										<i class="fa fa-heart"></i>
+									</div>
+								</div>
+								<div class="row2">
+									<span>23.342123</span>
+								</div>
+								<div class="signal row3">
+									<span> <i class="fa fa-arrow-up" style="color: var(--green);" v-on:click='increase(index)'></i> </span>
+									<span> <p>BTC</p> </span>
+									<span> <i class="fa fa-arrow-down" style="color: var(--plate3);" @click='decrease(index)'></i> </span>
+								</div>
+								<div class="row2">
+									<span>2312 USD</span>
+								</div>
+								<div class="row">
+									<div>
+										<span>P/L</span>
+										<span>399</span>
+										<span>USD</span>
+									</div>
+									<div>
+										<span>Bid:</span>
+										<span>0.34233</span>
+									</div>
+								</div>
+							</div>
+							<div class="tradeOpen trade">
+								<div class="field">
+									<span>Amount</span>
+									<input>
+								</div>
+								<div class="field">
+									<span>Price</span>
+									<input>
+								</div>
+								<div class="field">
+									<span>Total</span>
+									<input>
+								</div>
+								<button type="button" style="height: 50px;
+    font-size: 20px;
+    text-transform: uppercase;
+    background-color: var(--green);
+    border: 0 solid;
+    color: var(--plate3);
+    font-weight: bolder;
+    margin-top: 10px;">Buy</button>
+							</div>
+						</div>
+						<div class="card">
+							<div class="wrapper">
+								<div class="row">
+									<div>
+										<span>Ask</span>
+										<span>0.00343</span>
+									</div>
+									<div>
+										<i class="fa fa-area-chart"></i>
+										<i class="fa fa-heart"></i>
+									</div>
+								</div>
+								<div class="row2">
+									<span>23.342123</span>
+								</div>
+								<div class="signal row3">
+									<span> <i class="fa fa-arrow-up" style="color: var(--green);" v-on:click='increase(index)'></i> </span>
+									<span> <p>BTC</p> </span>
+									<span> <i class="fa fa-arrow-down" style="color: var(--plate3);" @click='decrease(index)'></i> </span>
+								</div>
+								<div class="row2">
+									<span>2312 USD</span>
+								</div>
+								<div class="row">
+									<div>
+										<span>P/L</span>
+										<span>399</span>
+										<span>USD</span>
+									</div>
+									<div>
+										<span>Bid:</span>
+										<span>0.34233</span>
+									</div>
+								</div>
+							</div>
+							<div class="trade">
+								<div class="field">
+									<span>Amount</span>
+									<input>
+								</div>
+								<div class="field">
+									<span>Price</span>
+									<input>
+								</div>
+								<div class="field">
+									<span>Total</span>
+									<input>
+								</div>
+								<button type="button" style="height: 50px;
+    font-size: 20px;
+    text-transform: uppercase;
+    background-color: var(--green);
+    border: 0 solid;
+    color: var(--plate3);
+    font-weight: bolder;
+    margin-top: 10px;">Buy</button>
+							</div>
+						</div>
+						<div class="card">
+							<div class="wrapper">
+								<div class="row">
+									<div>
+										<span>Ask</span>
+										<span>0.00343</span>
+									</div>
+									<div>
+										<i class="fa fa-area-chart"></i>
+										<i class="fa fa-heart"></i>
+									</div>
+								</div>
+								<div class="row2">
+									<span>23.342123</span>
+								</div>
+								<div class="signal row3">
+									<span> <i class="fa fa-arrow-up" style="color: var(--green);" v-on:click='increase(index)'></i> </span>
+									<span> <p>BTC</p> </span>
+									<span> <i class="fa fa-arrow-down" style="color: var(--plate3);" @click='decrease(index)'></i> </span>
+								</div>
+								<div class="row2">
+									<span>2312 USD</span>
+								</div>
+								<div class="row">
+									<div>
+										<span>P/L</span>
+										<span>399</span>
+										<span>USD</span>
+									</div>
+									<div>
+										<span>Bid:</span>
+										<span>0.34233</span>
+									</div>
+								</div>
+							</div>
+							<div class="trade">
+								<div class="field">
+									<span>Amount</span>
+									<input>
+								</div>
+								<div class="field">
+									<span>Price</span>
+									<input>
+								</div>
+								<div class="field">
+									<span>Total</span>
+									<input>
+								</div>
+								<button type="button" style="height: 50px;
+    font-size: 20px;
+    text-transform: uppercase;
+    background-color: var(--green);
+    border: 0 solid;
+    color: var(--plate3);
+    font-weight: bolder;
+    margin-top: 10px;">Buy</button>
+							</div>
+						</div>
+						<div class="card">
+							<div class="wrapper">
+								<div class="row">
+									<div>
+										<span>Ask</span>
+										<span>0.00343</span>
+									</div>
+									<div>
+										<i class="fa fa-area-chart"></i>
+										<i class="fa fa-heart"></i>
+									</div>
+								</div>
+								<div class="row2">
+									<span>23.342123</span>
+								</div>
+								<div class="signal row3">
+									<span> <i class="fa fa-arrow-up" style="color: var(--green);" v-on:click='increase(index)'></i> </span>
+									<span> <p>BTC</p> </span>
+									<span> <i class="fa fa-arrow-down" style="color: var(--plate3);" @click='decrease(index)'></i> </span>
+								</div>
+								<div class="row2">
+									<span>2312 USD</span>
+								</div>
+								<div class="row">
+									<div>
+										<span>P/L</span>
+										<span>399</span>
+										<span>USD</span>
+									</div>
+									<div>
+										<span>Bid:</span>
+										<span>0.34233</span>
+									</div>
+								</div>
+							</div>
+							<div class="trade">
+								<div class="field">
+									<span>Amount</span>
+									<input>
+								</div>
+								<div class="field">
+									<span>Price</span>
+									<input>
+								</div>
+								<div class="field">
+									<span>Total</span>
+									<input>
+								</div>
+								<button type="button" style="height: 50px;
+    font-size: 20px;
+    text-transform: uppercase;
+    background-color: var(--green);
+    border: 0 solid;
+    color: var(--plate3);
+    font-weight: bolder;
+    margin-top: 10px;">Buy</button>
+							</div>
+						</div>
+						<div class="card">
+							<div class="wrapper">
+								<div class="row">
+									<div>
+										<span>Ask</span>
+										<span>0.00343</span>
+									</div>
+									<div>
+										<i class="fa fa-area-chart"></i>
+										<i class="fa fa-heart"></i>
+									</div>
+								</div>
+								<div class="row2">
+									<span>23.342123</span>
+								</div>
+								<div class="signal row3">
+									<span> <i class="fa fa-arrow-up" style="color: var(--green);" v-on:click='increase(index)'></i> </span>
+									<span> <p>BTC</p> </span>
+									<span> <i class="fa fa-arrow-down" style="color: var(--plate3);" @click='decrease(index)'></i> </span>
+								</div>
+								<div class="row2">
+									<span>2312 USD</span>
+								</div>
+								<div class="row">
+									<div>
+										<span>P/L</span>
+										<span>399</span>
+										<span>USD</span>
+									</div>
+									<div>
+										<span>Bid:</span>
+										<span>0.34233</span>
+									</div>
+								</div>
+							</div>
+							<div class="trade">
+								<div class="field">
+									<span>Amount</span>
+									<input>
+								</div>
+								<div class="field">
+									<span>Price</span>
+									<input>
+								</div>
+								<div class="field">
+									<span>Total</span>
+									<input>
+								</div>
+								<button type="button" style="height: 50px;
+    font-size: 20px;
+    text-transform: uppercase;
+    background-color: var(--green);
+    border: 0 solid;
+    color: var(--plate3);
+    font-weight: bolder;
+    margin-top: 10px;">Buy</button>
+							</div>
+						</div>
+						<div class="card">
+							<div class="wrapper">
+								<div class="row">
+									<div>
+										<span>Ask</span>
+										<span>0.00343</span>
+									</div>
+									<div>
+										<i class="fa fa-area-chart"></i>
+										<i class="fa fa-heart"></i>
+									</div>
+								</div>
+								<div class="row2">
+									<span>23.342123</span>
+								</div>
+								<div class="signal row3">
+									<span> <i class="fa fa-arrow-up" style="color: var(--green);" v-on:click='increase(index)'></i> </span>
+									<span> <p>BTC</p> </span>
+									<span> <i class="fa fa-arrow-down" style="color: var(--plate3);" @click='decrease(index)'></i> </span>
+								</div>
+								<div class="row2">
+									<span>2312 USD</span>
+								</div>
+								<div class="row">
+									<div>
+										<span>P/L</span>
+										<span>399</span>
+										<span>USD</span>
+									</div>
+									<div>
+										<span>Bid:</span>
+										<span>0.34233</span>
+									</div>
+								</div>
+							</div>
+							<div class="trade">
+								<div class="field">
+									<span>Amount</span>
+									<input>
+								</div>
+								<div class="field">
+									<span>Price</span>
+									<input>
+								</div>
+								<div class="field">
+									<span>Total</span>
+									<input>
+								</div>
+								<button type="button" style="height: 50px;
+    font-size: 20px;
+    text-transform: uppercase;
+    background-color: var(--green);
+    border: 0 solid;
+    color: var(--plate3);
+    font-weight: bolder;
+    margin-top: 10px;">Buy</button>
+							</div>
+						</div>
+						<div class="card">
+							<div class="wrapper">
+								<div class="row">
+									<div>
+										<span>Ask</span>
+										<span>0.00343</span>
+									</div>
+									<div>
+										<i class="fa fa-area-chart"></i>
+										<i class="fa fa-heart"></i>
+									</div>
+								</div>
+								<div class="row2">
+									<span>23.342123</span>
+								</div>
+								<div class="signal row3">
+									<span> <i class="fa fa-arrow-up" style="color: var(--green);" v-on:click='increase(index)'></i> </span>
+									<span> <p>BTC</p> </span>
+									<span> <i class="fa fa-arrow-down" style="color: var(--plate3);" @click='decrease(index)'></i> </span>
+								</div>
+								<div class="row2">
+									<span>2312 USD</span>
+								</div>
+								<div class="row">
+									<div>
+										<span>P/L</span>
+										<span>399</span>
+										<span>USD</span>
+									</div>
+									<div>
+										<span>Bid:</span>
+										<span>0.34233</span>
+									</div>
+								</div>
+							</div>
+							<div class="trade">
+								<div class="field">
+									<span>Amount</span>
+									<input>
+								</div>
+								<div class="field">
+									<span>Price</span>
+									<input>
+								</div>
+								<div class="field">
+									<span>Total</span>
+									<input>
+								</div>
+								<button type="button" style="height: 50px;
+    font-size: 20px;
+    text-transform: uppercase;
+    background-color: var(--green);
+    border: 0 solid;
+    color: var(--plate3);
+    font-weight: bolder;
+    margin-top: 10px;">Buy</button>
+							</div>
+						</div>
+						<div class="card">
+							<div class="wrapper">
+								<div class="row">
+									<div>
+										<span>Ask</span>
+										<span>0.00343</span>
+									</div>
+									<div>
+										<i class="fa fa-area-chart"></i>
+										<i class="fa fa-heart"></i>
+									</div>
+								</div>
+								<div class="row2">
+									<span>23.342123</span>
+								</div>
+								<div class="signal row3">
+									<span> <i class="fa fa-arrow-up" style="color: var(--green);" v-on:click='increase(index)'></i> </span>
+									<span> <p>BTC</p> </span>
+									<span> <i class="fa fa-arrow-down" style="color: var(--plate3);" @click='decrease(index)'></i> </span>
+								</div>
+								<div class="row2">
+									<span>2312 USD</span>
+								</div>
+								<div class="row">
+									<div>
+										<span>P/L</span>
+										<span>399</span>
+										<span>USD</span>
+									</div>
+									<div>
+										<span>Bid:</span>
+										<span>0.34233</span>
+									</div>
+								</div>
+							</div>
+							<div class="trade">
+								<div class="field">
+									<span>Amount</span>
+									<input>
+								</div>
+								<div class="field">
+									<span>Price</span>
+									<input>
+								</div>
+								<div class="field">
+									<span>Total</span>
+									<input>
+								</div>
+								<button type="button" style="height: 50px;
+    font-size: 20px;
+    text-transform: uppercase;
+    background-color: var(--green);
+    border: 0 solid;
+    color: var(--plate3);
+    font-weight: bolder;
+    margin-top: 10px;">Buy</button>
+							</div>
+						</div>
+						<div class="card">
+							<div class="wrapper">
+								<div class="row">
+									<div>
+										<span>Ask</span>
+										<span>0.00343</span>
+									</div>
+									<div>
+										<i class="fa fa-area-chart"></i>
+										<i class="fa fa-heart"></i>
+									</div>
+								</div>
+								<div class="row2">
+									<span>23.342123</span>
+								</div>
+								<div class="signal row3">
+									<span> <i class="fa fa-arrow-up" style="color: var(--green);" v-on:click='increase(index)'></i> </span>
+									<span> <p>BTC</p> </span>
+									<span> <i class="fa fa-arrow-down" style="color: var(--plate3);" @click='decrease(index)'></i> </span>
+								</div>
+								<div class="row2">
+									<span>2312 USD</span>
+								</div>
+								<div class="row">
+									<div>
+										<span>P/L</span>
+										<span>399</span>
+										<span>USD</span>
+									</div>
+									<div>
+										<span>Bid:</span>
+										<span>0.34233</span>
+									</div>
+								</div>
+							</div>
+							<div class="trade">
+								<div class="field">
+									<span>Amount</span>
+									<input>
+								</div>
+								<div class="field">
+									<span>Price</span>
+									<input>
+								</div>
+								<div class="field">
+									<span>Total</span>
+									<input>
+								</div>
+								<button type="button" style="height: 50px;
+    font-size: 20px;
+    text-transform: uppercase;
+    background-color: var(--green);
+    border: 0 solid;
+    color: var(--plate3);
+    font-weight: bolder;
+    margin-top: 10px;">Buy</button>
+							</div>
+						</div>
+						<div class="card">
+							<div class="wrapper">
+								<div class="row">
+									<div>
+										<span>Ask</span>
+										<span>0.00343</span>
+									</div>
+									<div>
+										<i class="fa fa-area-chart"></i>
+										<i class="fa fa-heart"></i>
+									</div>
+								</div>
+								<div class="row2">
+									<span>23.342123</span>
+								</div>
+								<div class="signal row3">
+									<span> <i class="fa fa-arrow-up" style="color: var(--green);" v-on:click='increase(index)'></i> </span>
+									<span> <p>BTC</p> </span>
+									<span> <i class="fa fa-arrow-down" style="color: var(--plate3);" @click='decrease(index)'></i> </span>
+								</div>
+								<div class="row2">
+									<span>2312 USD</span>
+								</div>
+								<div class="row">
+									<div>
+										<span>P/L</span>
+										<span>399</span>
+										<span>USD</span>
+									</div>
+									<div>
+										<span>Bid:</span>
+										<span>0.34233</span>
+									</div>
+								</div>
+							</div>
+							<div class="trade">
+								<div class="field">
+									<span>Amount</span>
+									<input>
+								</div>
+								<div class="field">
+									<span>Price</span>
+									<input>
+								</div>
+								<div class="field">
+									<span>Total</span>
+									<input>
+								</div>
+								<button type="button" style="height: 50px;
+    font-size: 20px;
+    text-transform: uppercase;
+    background-color: var(--green);
+    border: 0 solid;
+    color: var(--plate3);
+    font-weight: bolder;
+    margin-top: 10px;">Buy</button>
+							</div>
+						</div>
+						<div class="card">
+							<div class="wrapper">
+								<div class="row">
+									<div>
+										<span>Ask</span>
+										<span>0.00343</span>
+									</div>
+									<div>
+										<i class="fa fa-area-chart"></i>
+										<i class="fa fa-heart"></i>
+									</div>
+								</div>
+								<div class="row2">
+									<span>23.342123</span>
+								</div>
+								<div class="signal row3">
+									<span> <i class="fa fa-arrow-up" style="color: var(--green);" v-on:click='increase(index)'></i> </span>
+									<span> <p>BTC</p> </span>
+									<span> <i class="fa fa-arrow-down" style="color: var(--plate3);" @click='decrease(index)'></i> </span>
+								</div>
+								<div class="row2">
+									<span>2312 USD</span>
+								</div>
+								<div class="row">
+									<div>
+										<span>P/L</span>
+										<span>399</span>
+										<span>USD</span>
+									</div>
+									<div>
+										<span>Bid:</span>
+										<span>0.34233</span>
+									</div>
+								</div>
+							</div>
+							<div class="trade">
+								<div class="field">
+									<span>Amount</span>
+									<input>
+								</div>
+								<div class="field">
+									<span>Price</span>
+									<input>
+								</div>
+								<div class="field">
+									<span>Total</span>
+									<input>
+								</div>
+								<button type="button" style="height: 50px;
+    font-size: 20px;
+    text-transform: uppercase;
+    background-color: var(--green);
+    border: 0 solid;
+    color: var(--plate3);
+    font-weight: bolder;
+    margin-top: 10px;">Buy</button>
+							</div>
+						</div>
+						<div class="card">
+							<div class="wrapper">
+								<div class="row">
+									<div>
+										<span>Ask</span>
+										<span>0.00343</span>
+									</div>
+									<div>
+										<i class="fa fa-area-chart"></i>
+										<i class="fa fa-heart"></i>
+									</div>
+								</div>
+								<div class="row2">
+									<span>23.342123</span>
+								</div>
+								<div class="signal row3">
+									<span> <i class="fa fa-arrow-up" style="color: var(--green);" v-on:click='increase(index)'></i> </span>
+									<span> <p>BTC</p> </span>
+									<span> <i class="fa fa-arrow-down" style="color: var(--plate3);" @click='decrease(index)'></i> </span>
+								</div>
+								<div class="row2">
+									<span>2312 USD</span>
+								</div>
+								<div class="row">
+									<div>
+										<span>P/L</span>
+										<span>399</span>
+										<span>USD</span>
+									</div>
+									<div>
+										<span>Bid:</span>
+										<span>0.34233</span>
+									</div>
+								</div>
+							</div>
+							<div class="trade">
+								<div class="field">
+									<span>Amount</span>
+									<input>
+								</div>
+								<div class="field">
+									<span>Price</span>
+									<input>
+								</div>
+								<div class="field">
+									<span>Total</span>
+									<input>
+								</div>
+								<button type="button" style="height: 50px;
+    font-size: 20px;
+    text-transform: uppercase;
+    background-color: var(--green);
+    border: 0 solid;
+    color: var(--plate3);
+    font-weight: bolder;
+    margin-top: 10px;">Buy</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer">
+				<div class="appStats">
+					<span id="appStatsStatus">Connecting</span>
+					<div class="indicator" id="appStatsIndicator"></div>
+				</div>
+			</div>
+		</div>
+		<script src="./js/socket.io.js"></script>
+		<script src="./js/vue.js"></script>
+		<!-- <script src="./core/core.js"></script> -->
+	</body>
+</html>

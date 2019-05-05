@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sign in to Trakt.tv - Trakt.tv</title>
+    <meta name="description" content="Sign in and start tracking movies and TV shows you&#39;re watching. You can also sign in with Facebook, Twitter, or Google.">
+    <meta property="og:site_name" content="Trakt.tv">
+    <meta content="224753454332789" property="fb:app_id">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <script type="text/javascript">
+        window.NREUM || (NREUM = {});
+        NREUM.info = {
+            "beacon": "bam.nr-data.net",
+            "errorBeacon": "bam.nr-data.net",
+            "licenseKey": "73f52d8248",
+            "applicationID": "5502013",
+            "transactionName": "IlZZEUJdD1QBSxlGEQRLREpDVxBLDVZYQE0PXEA=",
+            "queueTime": 0,
+            "applicationTime": 39,
+            "agent": ""
+        }
+    </script>
+    <script type="text/javascript">
+        window.NREUM || (NREUM = {}), __nr_require = function (e, t, n) {
+            function r(n) {
+                if (!t[n]) {
+                    var o = t[n] = {
+                        exports: {}
+                    };
+                    e[n][0].call(o.exports, function (t) {
+                        var o = e[n][1][t];
+                        return r(o || t)
+                    }, o, o.exports)
+                }
+                return t[n].exports
+            }
+            if ("function" == typeof __nr_require) return __nr_require;
+            for (var o = 0; o < n.length; o++) r(n[o]);
+            return r
+        }({
+            1: [function (e, t, n) {
+                function r() {}
+
+                function o(e, t, n) {
+                    return function () {
+                        return i(e, [f.now()].concat(u(arguments)), t ? null : this, n), t ? void 0 :
+                            this
+                    }
+                }
+                var i = e("handle"),
+                    a = e(2),
+                    u = e(3),
+                    c = e("ee").get("tracer"),
+                    f = e("loader"),
+                    s = NREUM;
+                "undefined" == typeof window.newrelic && (newrelic = s);
+                var p = ["setPageViewName", "setCustomAttribute", "setErrorHandler", "finished",
+                        "addToTrace", "inlineHit", "addRelease"
+                    ],
+                    d = "api-",
+                    l = d + "ixn-";
+                a(p, function (e, t) {
+                    s[t] = o(d + t, !0, "api")
+                }), s.addPageAction = o(d + "addPageAction", !0), s.setCurrentRouteName = o(d +
+                    "routeName", !0), t.exports = newrelic, s.interaction = function () {
+                    return (new r).get()
+                };
+                var m = r.prototype = {
+                    createTracer: function (e, t) {
+                        var n = {},
+                            r = this,
+                            o = "function" == typeof t;
+                        return i(l + "tracer", [f.now(), e, n], r),
+                            function () {
+                                if (c.emit((o ? "" : "no-") + "fn-start", [f.now(), r, o], n),
+                                    o) try {
+                                    return t.apply(this, arguments)
+                                } catch (e) {
+                                    throw c.emit("fn-err", [arguments, this, e], n), e
+                                } finally {
+                                    c.emit("fn-end", [f.now()], n)
+                                }
+                            }
+                    }
+                };
+                a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function (e,
+                    t) {
+                    m[t] = o(l + t)
+                }), newrelic.noticeError = function (e) {
+                    "string" == typeof e && (e = new Error(e)), i("err", [e, f.now()])
+                }
+            }, {}],
+            2: [function (e, t, n) {
+                function r(e, t) {
+                    var n = [],
+                        r = "",
+                        i = 0;
+                    for (r in e) o.call(e, r) && (n[i] = t(r, e[r]), i += 1);
+                    return n
+                }
+                var o = Object.prototype.hasOwnProperty;
+                t.exports = r
+            }, {}],
+            3: [function (e, t, n) {
+                function r(e, t, n) {
+                    t || (t = 0), "undefined" == typeof n && (n = e ? e.length : 0);
+                    for (var r = -1, o = n - t || 0, i = Array(o < 0 ? 0 : o); ++r < o;) i[r] = e[t + r];
+                    return i
+                }
+                t.exports = r
+            }, {}],
+            4: [function (e, t, n) {
+                t.exports = {
+                    exists: "undefined" != typeof window.performance && window.performance.timing &&
+                        "undefined" != typeof window.performance.timing.navigationStart
+                }
+            }, {}],
+            ee: [function (e, t, n) {
+                function r() {}
+
+                function o(e) {
+                    function t(e) {
+                        return e && e instanceof r ? e : e ? c(e, u, i) : i()
+                    }
+
+                    function n(n, r, o, i) {
+                        if (!d.aborted || i) {
+                            e && e(n, r, o);
+                            for (var a = t(o), u = m(n), c = u.length, f = 0; f < c; f++) u[f].apply(a,
+                                r);
+                            var p = s[y[n]];
+                            return p && p.push([b, n, r, a]), a
+                        }
+                    }
+
+                    function l(e, t) {
+                        v[e] = m(e).concat(t)
+                    }
+
+                    function m(e) {
+                        return v[e] || []
+                    }
+
+                    function w(e) {
+                        return p[e] = p[e] || o(n)
+                    }
+
+                    function g(e, t) {
+                        f(e, function (e, n) {
+                            t = t || "feature", y[n] = t, t in s || (s[t] = [])
+                        })
+                    }
+                    var v = {},
+                        y = {},
+                        b = {
+                            on: l,
+                            emit: n,
+                            get: w,
+                            listeners: m,
+                            context: t,
+                            buffer: g,
+                            abort: a,
+                            aborted: !1
+                        };
+                    return b
+                }
+
+                function i() {
+                    return new r
+                }
+
+                function a() {
+                    (s.api || s.feature) && (d.aborted = !0, s = d.backlog = {})
+                }
+                var u = "nr@context",
+                    c = e("gos"),
+                    f = e(2),
+                    s = {},
+                    p = {},
+                    d = t.exports = o();
+                d.backlog = s
+            }, {}],
+            gos: [function (e, t, n) {
+                function r(e, t, n) {
+                    if (o.call(e, t)) return e[t];
+                    var r = n();
+                    if (Object.defineProperty && Object.keys) try {
+                        return Object.defineProperty(e, t, {
+                            value: r,
+                            writable: !0,
+                            enumerable: !1
+                        }), r
+                    } catch (i) {}
+                    return e[t] = r, r
+                }
+                var o = Object.prototype.hasOwnProperty;
+                t.exports = r
+            }, {}],
+            handle: [function (e, t, n) {
+                function r(e, t, n, r) {
+                    o.buffer([e], r), o.emit(e, t, n)
+                }
+                var o = e("ee").get("handle");
+                t.exports = r, r.ee = o
+            }, {}],
+            id: [function (e, t, n) {
+                function r(e) {
+                    var t = typeof e;
+                    return !e || "object" !== t && "function" !== t ? -1 : e === window ? 0 : a(e, i,
+                        function () {
+                            return o++
+                        })
+                }
+                var o = 1,
+                    i = "nr@id",
+                    a = e("gos");
+                t.exports = r
+            }, {}],
+            loader: [function (e, t, n) {
+                function r() {
+                    if (!x++) {
+                        var e = h.info = NREUM.info,
+                            t = d.getElementsByTagName("script")[0];
+                        if (setTimeout(s.abort, 3e4), !(e && e.licenseKey && e.applicationID && t))
+                            return s.abort();
+                        f(y, function (t, n) {
+                            e[t] || (e[t] = n)
+                        }), c("mark", ["onload", a() + h.offset], null, "api");
+                        var n = d.createElement("script");
+                        n.src = "https://" + e.agent, t.parentNode.insertBefore(n, t)
+                    }
+                }
+
+                function o() {
+                    "complete" === d.readyState && i()
+                }
+
+                function i() {
+                    c("mark", ["domContent", a() + h.offset], null, "api")
+                }
+
+                function a() {
+                    return E.exists && performance.now ? Math.round(performance.now()) : (u = Math.max(
+                        (new Date).getTime(), u)) - h.offset
+                }
+                var u = (new Date).getTime(),
+                    c = e("handle"),
+                    f = e(2),
+                    s = e("ee"),
+                    p = window,
+                    d = p.document,
+                    l = "addEventListener",
+                    m = "attachEvent",
+                    w = p.XMLHttpRequest,
+                    g = w && w.prototype;
+                NREUM.o = {
+                    ST: setTimeout,
+                    SI: p.setImmediate,
+                    CT: clearTimeout,
+                    XHR: w,
+                    REQ: p.Request,
+                    EV: p.Event,
+                    PR: p.Promise,
+                    MO: p.MutationObserver
+                };
+                var v = "" + location,
+                    y = {
+                        beacon: "bam.nr-data.net",
+                        errorBeacon: "bam.nr-data.net",
+                        agent: "js-agent.newrelic.com/nr-1071.min.js"
+                    },
+                    b = w && g && g[l] && !/CriOS/.test(navigator.userAgent),
+                    h = t.exports = {
+                        offset: u,
+                        now: a,
+                        origin: v,
+                        features: {},
+                        xhrWrappable: b
+                    };
+                e(1), d[l] ? (d[l]("DOMContentLoaded", i, !1), p[l]("load", r, !1)) : (d[m](
+                    "onreadystatechange", o), p[m]("onload", r)), c("mark", ["firstbyte", u], null,
+                    "api");
+                var x = 0,
+                    E = e(4)
+            }, {}]
+        }, {}, ["loader"]);
+    </script>
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+    <meta content="yes" name="mobile-web-app-capable">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="Trakt.tv" name="apple-mobile-web-app-title">
+    <link color="#ed1c24" href="//walter.trakt.tv/hotlink-ok/public/favicon.svg" rel="mask-icon">
+    <meta content="#ed1c24" name="theme-color">
+    <link href="//walter.trakt.tv/hotlink-ok/public/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="//walter.trakt.tv/hotlink-ok/public/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="//walter.trakt.tv/hotlink-ok/public/startup-750x1294.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)"
+        rel="apple-touch-startup-image">
+    <link href="/manifest.json" rel="manifest">
+    <link href="//walter.trakt.tv/hotlink-ok/public/opensearch.xml" rel="search" title="Trakt.tv" type="application/opensearchdescription+xml">
+    <meta content="Trakt.tv" name="application-name">
+    <meta content="#232325" name="msapplication-TileColor">
+    <meta content="//walter.trakt.tv/hotlink-ok/public/apple-touch-icon.png" name="msapplication-TileImage">
+    <link crossorigin href="https://fonts.gstatic.com/" rel="preconnect">
+    <link crossorigin href="https://cdnjs.cloudflare.com/" rel="preconnect">
+    <link as="font" crossorigin href="https://api.trakt.tv/assets/ProximaNova-Sbold-webfont-1cda23ddf1b620e278ad1c95661a868e.woff"
+        rel="preload" type="font/woff">
+    <link as="font" crossorigin href="https://api.trakt.tv/assets/ProximaNova-Reg-webfont-fab98781435e9a4b071dd9244115fefa.woff"
+        rel="preload" type="font/woff">
+    <link as="font" crossorigin href="https://api.trakt.tv/assets/ProximaNova-Bold-webfont-ae0a1c80bbee85f35d7a0cf16d265c41.woff"
+        rel="preload" type="font/woff">
+    <link as="font" crossorigin href="https://api.trakt.tv/assets/trakt-2f665d493248407df2ad7f4cb103e563.woff?qzj7z6" rel="preload"
+        type="font/woff">
+    <link as="font" crossorigin href="https://api.trakt.tv/assets/logos-c874e844804b9d0e4e4e23e66881de81.woff?i7nupw" rel="preload"
+        type="font/woff">
+    <link rel="stylesheet" media="all" href="/assets/application-baa4c0e9aba1abf1d7222543c71a4ced.css" data-turbolinks-track="reload"
+    />
+    <script src="//static.criteo.net/js/px.js?ch=1" data-turbolinks-track="reload"></script>
+    <script src="//static.criteo.net/js/px.js?ch=2" data-turbolinks-track="reload"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.3/jquery.min.js" data-turbolinks-track="reload"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-ujs/1.2.1/rails.min.js" data-turbolinks-track="reload"></script>
+    <script src="/assets/libs-3f8ae46e3e9abfd18bac5d78cad07ce0.js" data-turbolinks-track="reload"></script>
+    <script src="/assets/application-62456a66e71988d2f04322c7a64e0055.js" data-turbolinks-track="reload"></script>
+    <script src="//walter.trakt.tv/js/btgallery.js?20181"></script>
+    <script>
+        ratingsText = {
+            "1": "Weak Sauce :(",
+            "2": "Terrible",
+            "3": "Bad",
+            "4": "Poor",
+            "5": "Meh",
+            "6": "Fair",
+            "7": "Good",
+            "8": "Great",
+            "9": "Superb",
+            "10": "Totally Ninja!"
+        }
+        collectionMetadataValues = {}
+    </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jstimezonedetect/1.0.6/jstz.min.js" data-turbolinks-track="reload"></script>
+    <meta name="csrf-param" content="authenticity_token" />
+    <meta name="csrf-token" content="bo8befR7mDvoUQsLKlQfYabggwLgSceht/zTeJWMhJnbGJZDbZibWgZW0wdWMz9DL+GmhAvdUwNSeZBUWtJruw=="
+    />
+</head>
+
+<body class="sessions new signed-out   no-webp ">
+    <script data-turbolinks-eval="false">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-18822291-1', 'auto');
+        ga('require', 'linkid', 'linkid.js');
+    </script>
+    <script>
+        ga('set', 'location', location.href.split('#')[0]);
+        ga('send', 'pageview', {
+            "title": document.title
+        });
+    </script>
+    <!--[if lt IE 7]><p class="chromeframe">You are using an <strong>outdated</strong> browser.Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p><![endif]-->
+    <header class="navbar" id="top-nav" role="navigation">
+        <div id="top-brand">
+            <a href="/">
+                <img width="65" src="/assets/logos/header@2x-56e5ba415108fa367fd64e5b5df9d0c5.png" alt="Header@2x" />
+                <div class="bottom-wrapper">
+                    <div class="bottom"></div>
+                </div>
+            </a>
+        </div>
+        <div class="navbar-header">
+            <a class="visible-xs-inline" id="xs-sign-in" href="/auth/signin">
+                <i class="fa fa-user"></i>
+            </a>
+            <button class="navbar-toggle" id="mobile-nav-button" type="button">
+                <div class="fa fa-bars"></div>
+            </button>
+            <div id="brand-text">trakt</div>
+        </div>
+        <form id="header-search" class="navbar-form navbar-left" action="/search" accept-charset="UTF-8" method="get">
+            <input name="utf8" type="hidden" value="&#x2713;" />
+            <div class="btn" id="header-search-button">
+                <i class="fa fa-search"></i>
+            </div>
+            <input id="header-search-query" name="query" placeholder="What are you looking for?" type="text" value="">
+            <span class="dropdown" id="header-search-type">
+                <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    <span class="title">Movies & Shows </span>
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li>
+                        <a data-type="">Movies & Shows</a>
+                    </li>
+                    <li>
+                        <a data-type="movies">Movies</a>
+                    </li>
+                    <li>
+                        <a data-type="shows">Shows</a>
+                    </li>
+                    <li>
+                        <a data-type="episodes">Episodes</a>
+                    </li>
+                    <li>
+                        <a data-type="people">People</a>
+                    </li>
+                    <li>
+                        <a data-type="lists">Lists</a>
+                    </li>
+                    <li>
+                        <a data-type="users">Users</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a data-type="trakt">Trakt ID</a>
+                    </li>
+                    <li>
+                        <a data-type="imdb">IMDB ID</a>
+                    </li>
+                    <li>
+                        <a data-type="tmdb">TMDB ID</a>
+                    </li>
+                    <li>
+                        <a data-type="tvdb">TVDB ID</a>
+                    </li>
+                </ul>
+            </span>
+        </form>
+        <a class="btn" id="header-shop" target="_blank" data-text="&lt;a href=&#39;https://shop.trakt.tv&#39; target=&#39;_blank&#39;&gt;&lt;img src=&#39;https://api.trakt.tv/assets/shop/shirts/002-f7f07add8fe425b06ec21656b5fc3584.jpg&#39;&gt;&lt;/a&gt;&lt;div class=&#39;text&#39;&gt;Grab your limited edition Trakt vintage T-shirt before its gone!&lt;a href=&#39;https://shop.trakt.tv&#39; target=&#39;_blank&#39;&gt;Visit the Trakt Shop →&lt;/a&gt;&lt;/div&gt;"
+            href="https://shop.trakt.tv">
+            <i class="trakt-icon-shirt"></i>
+            <span class="text">Shop</span>
+        </a>
+        <ul class="nav navbar-nav navbar-right hidden-xs">
+            <li>
+                <a class="btn btn-primary" href="/auth/join">
+                    <i class="visible-sm-inline fa fa-user"></i>
+                    <span class="hidden-sm">Join Trakt</span>
+                </a>
+            </li>
+            <li class="hidden-sm">
+                <a class="btn btn-signup" href="/auth/signin">Sign In</a>
+            </li>
+        </ul>
+        <div id="main-nav">
+            <ul class="nav navbar-nav brand-left">
+                <li>
+                    <a href="/shows/trending">TV</a>
+                </li>
+                <li>
+                    <a href="/movies/trending">Movies</a>
+                </li>
+                <li>
+                    <a href="/calendars">Calendar</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav brand-right">
+                <li>
+                    <a href="/discover">Discover</a>
+                </li>
+                <li>
+                    <a href="/apps">Apps</a>
+                </li>
+                <li>
+                    <a href="/vip">VIP</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="mobile-nav" id="mobile-nav">
+        <ul>
+            <li>
+                <a href="/shows/trending">TV</a>
+            </li>
+            <li>
+                <a href="/movies/trending">Movies</a>
+            </li>
+            <li>
+                <a href="/calendars">Calendar</a>
+            </li>
+            <li>
+                <a href="/discover">Discover</a>
+            </li>
+            <li>
+                <a href="/apps">Apps</a>
+            </li>
+            <li>
+                <a href="/vip">VIP</a>
+            </li>
+        </ul>
+    </div>
+    <div id="flashes"></div>
+    <section data-bg="/assets/auth/breaking-bad-blur-23a8acffe8b2e154befc3a1d6dd7285d.jpg" id="auth-bg-wrapper"></section>
+    <div id="auth-form-wrapper">
+        <a href="https://api.trakt.tv/">
+            <div class="logo-wrapper">
+                <div class="base"></div>
+                <div class="logo"></div>
+            </div>
+        </a>
+        <form class="simple_form form-signin" novalidate="novalidate" id="new_user" action="/auth/signin" accept-charset="UTF-8"
+            method="post">
+            <input name="utf8" type="hidden" value="&#x2713;" />
+            <input type="hidden" name="authenticity_token" value="9Jj4e7wak8FwF4A6jCbDntvfenQeRnSDLxaKTfTez8VBD3VBJfmQoJ4QWDbwQeO8Ut5f8vXS4CHKk8lhO4Ag5w=="
+            />
+            <h1>trakt</h1>
+            <h2 class="quote">I am the one who knocks.</h2>
+            <div class="form-inputs with-icons">
+                <div class="with-icon">
+                    <div class="icon trakt-icon-user"></div>
+                    <div class="control-group string required user_login">
+                        <div class="controls">
+                            <input class="string required top form-control" autocorrect="off" autocapitalize="off" autofocus="autofocus"
+                                required="required" aria-required="true" placeholder="Username or Email" type="text" name="user[login]"
+                                id="user_login" />
+                        </div>
+                    </div>
+                </div>
+                <div class="with-icon">
+                    <a class="side-link" tabindex="-1" href="/auth/password/new">forgot?</a>
+                    <div class="icon trakt-icon-lock"></div>
+                    <div class="control-group password required user_password">
+                        <div class="controls">
+                            <input class="password required bottom form-control" required="required" aria-required="true" placeholder="Password"
+                                type="password" name="user[password]" id="user_password" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-actions">
+                <input type="submit" name="commit" value="Sign in" class="btn btn btn-primary btn-block" />
+                <div class="control-group hidden user_remember_me">
+                    <div class="controls">
+                        <input value="1" class="hidden" type="hidden" name="user[remember_me]" id="user_remember_me" />
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="auth-services-wrapper">
+            <div class="auth-services">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <a href="/auth/auth/twitter">
+                            <div class="btn btn-block btn-twitter">
+                                <div class="icon fa fa-twitter"></div>
+                                <div class="text">Twitter</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-4">
+                        <a href="/auth/auth/facebook">
+                            <div class="btn btn-block btn-facebook">
+                                <div class="icon fa fa-facebook"></div>
+                                <div class="text">Facebook</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-4">
+                        <a href="/auth/auth/google_oauth2">
+                            <div class="btn btn-block btn-google">
+                                <img class="icon" src="/assets/sites/google-6db0487490faa201425ab9ad85d3762d.png" alt="Google"
+                                />
+                                <div class="text">Google</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-wrapper">New to Trakt.tv?
+            <a href="/auth/join">Join now
+                <span class="trakt-icon-arrow-right"></span>
+            </a>
+        </div>
+    </div>
+    <input id="moviehuck" type="hidden" value="true">
+    <input id="abhuck" type="hidden" value="true">
+    <div id="main-search">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Find a TV show or movie</h2>
+                    <form id="footer-search" action="/search" accept-charset="UTF-8" method="get">
+                        <input name="utf8" type="hidden" value="&#x2713;" />
+                        <input class="footer-search col-xs-12" id="footer-search-query" name="query" placeholder="Search for Westworld, Star Wars, or Breaking Bad...">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="links">
+            <ul class="left-side">
+                <li>
+                    <a href="/about">About</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://blog.trakt.tv">Blog</a>
+                </li>
+                <li>
+                    <a href="/forums/">Forums</a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://docs.trakt.apiary.io">API</a>
+                </li>
+                <li>
+                    <a href="/activate">Activate Device</a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://support.trakt.tv">Help</a>
+                </li>
+                <li>
+                    <a href="/terms">Terms</a>
+                </li>
+                <li>
+                    <a href="/privacy">Privacy</a>
+                </li>
+            </ul>
+            <div class="social">
+                <a title="Trakt Shop" target="_blank" href="https://shop.trakt.tv">
+                    <div class="fa trakt-icon-shirt"></div>
+                </a>
+                <a title="Blog" target="_blank" href="https://blog.trakt.tv">
+                    <div class="fa fa-medium"></div>
+                </a>
+                <a title="Twitter" target="_blank" href="https://twitter.com/trakt">
+                    <div class="fa fa-twitter"></div>
+                </a>
+                <a title="Facebook" target="_blank" href="https://facebook.com/trakt.tv">
+                    <div class="fa fa-facebook"></div>
+                </a>
+                <a title="Google+" target="_blank" href="https://google.com/+TraktTv">
+                    <div class="fa fa-google-plus"></div>
+                </a>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="trakt">
+                <img align="left" class="logo" height="30" src="/assets/base/mini-white-logo@2x-12e20fb482825b4e56fd8fc979ab9d82.png"
+                    alt="Mini white logo@2x" />&copy; 2010-2018 trakt, inc. All rights reserved.
+                <br>Hand crafted in San Diego and the Bay Area.</div>
+            <a target="_blank" class="amazon" href="/amazon">
+                <div class="icon">
+                    <div class="fa fa-amazon"></div>
+                </div>
+                <div class="text">Shop at Amazon.com
+                    <br>to help support us!</div>
+            </a>
+        </div>
+    </footer>
+    <div id="loading-bg">
+        <div class="logo">
+            <i class="trakt-icon-trakt"></i>
+        </div>
+    </div>
+    <div id="loading-bottom">
+        <div class="fa fa-times-circle" id="loading-bottom-close"></div>
+        <div class="fa fa-refresh fa-spin"></div>
+        <span class="text">Loading...</span>
+    </div>
+    <div aria-hidden="true" class="checkin-modal modal fade" id="watch-now-modal" role="dialog" tabindex="-1">
+        <div class="checkin-close trakt-icon-delete-thick" id="watch-now-close"></div>
+        <div id="watch-now-content"></div>
+    </div>
+</body>
+
+</html>
